@@ -38,14 +38,25 @@ class LoginPage extends StatelessWidget {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                const Text(
-                  'Welcome back, enter your credentials to login',
-                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                // Column for Welcome Text and Instruction Text
+                Column(
+                  children: [
+                    const Text(
+                      'Welcome Back!',
+                      style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                    ),
+                    const SizedBox(height: 10),
+                    const Text(
+                      'Enter your credentials to login',
+                      style: TextStyle(fontSize: 18, color: Colors.blueAccent),
+                    ),
+                  ],
                 ),
                 const SizedBox(height: 20),
                 TextFormField(
                   decoration: const InputDecoration(
                     labelText: 'Username',
+                    prefixIcon: Icon(Icons.person),
                     border: OutlineInputBorder(),
                   ),
                 ),
@@ -53,6 +64,7 @@ class LoginPage extends StatelessWidget {
                 TextFormField(
                   decoration: const InputDecoration(
                     labelText: 'Password',
+                    prefixIcon: Icon(Icons.lock),
                     border: OutlineInputBorder(),
                   ),
                   obscureText: true,
@@ -120,14 +132,25 @@ class RegisterPage extends StatelessWidget {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                const Text(
-                  'Create your account',
-                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                // Column for Registration Heading and Subheading
+                Column(
+                  children: [
+                    const Text(
+                      'Sign Up',
+                      style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                    ),
+                    const SizedBox(height: 10),
+                    const Text(
+                      'Create your account',
+                      style: TextStyle(fontSize: 18, color: Colors.blueAccent),
+                    ),
+                  ],
                 ),
                 const SizedBox(height: 20),
                 TextFormField(
                   decoration: const InputDecoration(
                     labelText: 'Username',
+                    prefixIcon: Icon(Icons.person),
                     border: OutlineInputBorder(),
                   ),
                 ),
@@ -135,6 +158,7 @@ class RegisterPage extends StatelessWidget {
                 TextFormField(
                   decoration: const InputDecoration(
                     labelText: 'Email',
+                    prefixIcon: Icon(Icons.email),
                     border: OutlineInputBorder(),
                   ),
                   keyboardType: TextInputType.emailAddress,
@@ -143,6 +167,7 @@ class RegisterPage extends StatelessWidget {
                 TextFormField(
                   decoration: const InputDecoration(
                     labelText: 'Password',
+                    prefixIcon: Icon(Icons.lock),
                     border: OutlineInputBorder(),
                   ),
                   obscureText: true,
@@ -151,6 +176,7 @@ class RegisterPage extends StatelessWidget {
                 TextFormField(
                   decoration: const InputDecoration(
                     labelText: 'Confirm Password',
+                    prefixIcon: Icon(Icons.lock),
                     border: OutlineInputBorder(),
                   ),
                   obscureText: true,

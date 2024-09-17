@@ -27,7 +27,7 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Beranda"), backgroundColor: Colors.blueGrey),
+      appBar: AppBar(title: Text("Beranda"), backgroundColor: Colors.lightBlueAccent),
       body: Container(
         child: Column(
           children: [
